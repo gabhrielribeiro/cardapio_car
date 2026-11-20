@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Catálogo de veículos novos e seminovos."
+    />
+    <title>AutoVitrine | Encontre seu próximo carro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="#inicio" aria-label="AutoVitrine - início">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>Auto<span>Vitrine</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#catalogo">Comprar carro</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#sobre">Sobre nós</a>
+        </nav>
+
+        <a class="account-link" href="#conta">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
+          </svg>
+          <span>Entrar</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+          <p class="eyebrow">Seu próximo carro está aqui</p>
+          <h1 id="hero-title">Carros para todos os <em>caminhos.</em></h1>
+          <p class="hero-copy">
+            Encontre veículos novos e seminovos selecionados para você.
+          </p>
+
+          <form class="search-panel" id="car-search" role="search">
+            <label class="search-field" for="search-input">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="6" />
+                <path d="m16 16 4 4" />
+              </svg>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Digite marca ou modelo do carro"
+                autocomplete="off"
+              />
+            </label>
+            <button class="button button-primary" type="submit">Buscar carros</button>
+          </form>
+
+          <div class="quick-filters" aria-label="Filtros rápidos">
+            <span>Mais buscados:</span>
+            <button type="button" data-filter="suv">SUV</button>
+            <button type="button" data-filter="sedan">Sedan</button>
+            <button type="button" data-filter="hatch">Hatch</button>
+            <button type="button" data-filter="automatico">Automático</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-dark">Veículos em destaque</p>
+              <h2 id="catalog-title">Escolha o carro ideal para você</h2>
+              <p class="section-copy">Todos os carros passam por uma avaliação completa.</p>
+            </div>
+            <a class="see-all" href="#todos">
+              Ver todos os carros
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+
+          <div class="cars-grid" id="cars-grid">
+            <article class="car-card" data-search="toyota corolla xei sedan automatico">
+              <div class="car-image-link">
+                <img src="https://images.unsplash.com/photo-1623869675781-80aa31012a5a?auto=format&fit=crop&w=900&q=85" alt="Toyota Corolla preto" />
+                <span class="tag">Destaque</span>
+                <button class="favorite" type="button" aria-label="Adicionar Toyota Corolla aos favoritos">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.6a5.5 5.5 0 0 0-.1-7.8Z" /></svg>
+                </button>
+              </div>
+              <div class="car-content">
+                <p class="car-name">Toyota Corolla <span>XEi 2.0</span></p>
+                <ul class="car-meta" aria-label="Dados do veículo"><li>2022/2023</li><li>34.200 km</li><li>Automático</li></ul>
+                <p class="price"><small>por</small> R$ 139.900</p>
+                <p class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2" /></svg> São Paulo, SP</p>
+                <a class="card-details-link" href="detalhes.html">Ver detalhes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+              </div>
+            </article>
+
+            <article class="car-card" data-search="volkswagen nivus comfortline suv automatico">
+              <div class="car-image-link">
+                <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=85" alt="Volkswagen Nivus cinza" />
+                <button class="favorite" type="button" aria-label="Adicionar Volkswagen Nivus aos favoritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.6a5.5 5.5 0 0 0-.1-7.8Z" /></svg></button>
+              </div>
+              <div class="car-content">
+                <p class="car-name">Volkswagen Nivus <span>Comfortline</span></p>
+                <ul class="car-meta" aria-label="Dados do veículo"><li>2023/2023</li><li>18.900 km</li><li>Automático</li></ul>
+                <p class="price"><small>por</small> R$ 119.990</p>
+                <p class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2" /></svg> Campinas, SP</p>
+                <a class="card-details-link" href="detalhes.html">Ver detalhes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+              </div>
+            </article>
+
+            <article class="car-card" data-search="honda civic touring sedan automatico">
+              <div class="car-image-link">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85" alt="Honda Civic prata" />
+                <button class="favorite" type="button" aria-label="Adicionar Honda Civic aos favoritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.6a5.5 5.5 0 0 0-.1-7.8Z" /></svg></button>
+              </div>
+              <div class="car-content">
+                <p class="car-name">Honda Civic <span>Touring 1.5 Turbo</span></p>
+                <ul class="car-meta" aria-label="Dados do veículo"><li>2021/2021</li><li>48.600 km</li><li>Automático</li></ul>
+                <p class="price"><small>por</small> R$ 154.900</p>
+                <p class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2" /></svg> São Paulo, SP</p>
+                <a class="card-details-link" href="detalhes.html">Ver detalhes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+              </div>
+            </article>
+
+            <article class="car-card" data-search="jeep compass limited suv automatico">
+              <div class="car-image-link">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=85" alt="Jeep Compass azul" />
+                <button class="favorite" type="button" aria-label="Adicionar Jeep Compass aos favoritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.6a5.5 5.5 0 0 0-.1-7.8Z" /></svg></button>
+              </div>
+              <div class="car-content">
+                <p class="car-name">Jeep Compass <span>Limited T270</span></p>
+                <ul class="car-meta" aria-label="Dados do veículo"><li>2022/2022</li><li>27.800 km</li><li>Automático</li></ul>
+                <p class="price"><small>por</small> R$ 164.900</p>
+                <p class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2" /></svg> Santo André, SP</p>
+                <a class="card-details-link" href="detalhes.html">Ver detalhes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+              </div>
+            </article>
+
+            <article class="car-card" data-search="chevrolet onix premier hatch automatico">
+              <div class="car-image-link">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=85" alt="Chevrolet Onix vermelho" />
+                <button class="favorite" type="button" aria-label="Adicionar Chevrolet Onix aos favoritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.6a5.5 5.5 0 0 0-.1-7.8Z" /></svg></button>
+              </div>
+              <div class="car-content">
+                <p class="car-name">Chevrolet Onix <span>Premier 1.0 Turbo</span></p>
+                <ul class="car-meta" aria-label="Dados do veículo"><li>2023/2024</li><li>11.500 km</li><li>Automático</li></ul>
+                <p class="price"><small>por</small> R$ 98.900</p>
+                <p class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2" /></svg> Osasco, SP</p>
+                <a class="card-details-link" href="detalhes.html">Ver detalhes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+              </div>
+            </article>
+
+            <article class="car-card" data-search="hyundai creta platinum suv automatico">
+              <div class="car-image-link">
+                <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=900&q=85" alt="Hyundai Creta branco" />
+                <button class="favorite" type="button" aria-label="Adicionar Hyundai Creta aos favoritos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.6a5.5 5.5 0 0 0-.1-7.8Z" /></svg></button>
+              </div>
+              <div class="car-content">
+                <p class="car-name">Hyundai Creta <span>Platinum 1.0 TGDI</span></p>
+                <ul class="car-meta" aria-label="Dados do veículo"><li>2023/2023</li><li>21.700 km</li><li>Automático</li></ul>
+                <p class="price"><small>por</small> R$ 132.900</p>
+                <p class="location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2" /></svg> São Bernardo, SP</p>
+                <a class="card-details-link" href="detalhes.html">Ver detalhes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+              </div>
+            </article>
+          </div>
+
+          <p class="empty-state" id="empty-state" hidden>Nenhum carro encontrado. Tente outro termo.</p>
+          <button class="button button-outline mobile-see-all" type="button">Ver todos os carros</button>
+        </div>
+      </section>
+
+      <section class="benefits" id="como-funciona" aria-label="Vantagens da AutoVitrine">
+        <div class="container benefits-grid">
+          <div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6" /></svg></span><div><h3>Carros revisados</h3><p>Inspeção completa em mais de 140 itens.</p></div></div>
+          <div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5c0 4.6 3.2 8.8 7.5 10 4.3-1.2 7.5-5.4 7.5-10V6L12 3Z" /><path d="m9 12 2 2 4-4" /></svg></span><div><h3>Compra segura</h3><p>Documentação e procedência verificadas.</p></div></div>
+          <div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 3v4m10-4v4M6 11h4m-4 4h4m4-4h4m-4 4h4M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" /></svg></span><div><h3>Garantia de 90 dias</h3><p>Mais tranquilidade depois da compra.</p></div></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="sobre">
+      <div class="container footer-content">
+        <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">A</span><span>Auto<span>Vitrine</span></span></a>
+        <p>© 2026 AutoVitrine. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
