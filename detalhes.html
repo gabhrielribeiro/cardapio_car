@@ -44,16 +44,16 @@
             <p class="detail-price"><small>Por apenas</small>R$ 139.900</p>
             <p class="detail-place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2" /></svg>São Paulo, SP</p>
             <!--
-              INTEGRAÇÃO FUTURA DO WHATSAPP
-              - Nesta versão estática, o link abre o WhatsApp com uma mensagem de exemplo.
-              - No Django, inclua o número da loja (somente dígitos: 5511999999999)
-                para abrir a conversa diretamente com a loja.
-              - A mensagem deve incluir os dados do carro (marca, modelo e código) e ser codificada para URL.
-              - Formato final para a integração dinâmica:
-                https://wa.me/NUMERO_DA_LOJA?text=MENSAGEM_CODIFICADA
-              Exemplo de mensagem: "Olá, tenho interesse no Toyota Corolla (AV-10234)."
+              WHATSAPP DINÂMICO (Django)
+              Na view, prepare:
+                loja.whatsapp: telefone da loja com código do país (somente dígitos)
+                mensagem_whatsapp: mensagem já montada com os dados do carro.
+              Exemplo na view:
+                mensagem_whatsapp = f"Olá, tenho interesse no {car.nome} ({car.codigo})."
+              No template, urlencode codifica a mensagem para a URL.
+              Não coloque o telefone real aqui: ele vem da configuração da loja.
             -->
-            <a class="whatsapp-button" href="https://wa.me/?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Toyota%20Corolla%20XEi%202.0%20%28AV-10234%29." target="_blank" rel="noopener" aria-label="Abrir WhatsApp para demonstrar interesse no veículo">
+            <a class="whatsapp-button" href="https://wa.me/{{ loja.whatsapp }}?text={{ mensagem_whatsapp|urlencode }}" target="_blank" rel="noopener" aria-label="Abrir WhatsApp para demonstrar interesse no veículo">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.4-4.8A8.4 8.4 0 1 1 20.5 11.7Z" /><path d="M8.3 8.2c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.3.1.5-.1.7l-.5.7c-.1.1-.1.3 0 .4.5.9 1.2 1.5 2.1 2 .2.1.3.1.5 0l.7-.8c.2-.2.4-.2.6-.1l1.8.8c.3.1.4.3.4.5v.5c0 .3-.2.6-.5.7-.6.3-1.3.4-2.1.2-1.2-.3-2.9-1.4-4.3-2.8-1.3-1.4-2.4-3.1-2.7-4.3-.2-.8-.1-1.5.2-2.1Z" /></svg>
               Tenho interesse
             </a>
