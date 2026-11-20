@@ -48,7 +48,7 @@
             Encontre veículos novos e seminovos selecionados para você.
           </p>
 
-          <form class="search-panel" id="car-search" role="search">
+          <form class="search-panel" id="car-search" role="search" method="GET" action="#catalogo">
             <label class="search-field" for="search-input">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="11" cy="11" r="6" />
@@ -56,6 +56,7 @@
               </svg>
               <input
                 id="search-input"
+                name="busca"
                 type="search"
                 placeholder="Digite marca ou modelo do carro"
                 autocomplete="off"
@@ -66,10 +67,10 @@
 
           <div class="quick-filters" aria-label="Filtros rápidos">
             <span>Mais buscados:</span>
-            <button type="button" data-filter="suv">SUV</button>
-            <button type="button" data-filter="sedan">Sedan</button>
-            <button type="button" data-filter="hatch">Hatch</button>
-            <button type="button" data-filter="automatico">Automático</button>
+            <a href="?busca=suv#catalogo">SUV</a>
+            <a href="?busca=sedan#catalogo">Sedan</a>
+            <a href="?busca=hatch#catalogo">Hatch</a>
+            <a href="?busca=automatico#catalogo">Automático</a>
           </div>
         </div>
       </section>
